@@ -1,4 +1,4 @@
-package com.example.unitconvertor;
+package edu.gatech.seclass.unitconvertor;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -6,12 +6,12 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
 
-public class MainActivity extends Activity {
+public class DistanceActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		setContentView(R.layout.activity_distance);
 	}
 	
 	public void handleClick(View view){
