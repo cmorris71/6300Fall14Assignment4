@@ -7,17 +7,28 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 
 public class DistanceActivity extends Activity {
+	
+	EditText mEditText;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_distance);
+		
+		mEditText = (EditText) findViewById(R.id.text1);
 	}
 	
 	public void handleClick(View view){
+		
+		if(mEditText.getText().length()==0){
+			showError();
+			return;
+		}
+		
 		boolean checked = ((RadioButton) view).isChecked();
 		
 		EditText txt = (EditText) findViewById(R.id.text1);
+		
 		double distance = Double.parseDouble(txt.getText().toString());
 		
 		switch(view.getId()){
@@ -44,5 +55,9 @@ public class DistanceActivity extends Activity {
 		return String.format("%.3f", km);
 		//return String.valueOf(km);
 	}
+	
+	private void showError() {
+		mEditText.setError("Input value may not be empty");
+		}
 	
 }

@@ -2,10 +2,10 @@
 <resources>
 
     <string name="app_name">Unit Convertor</string>
-    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_main">Unit Convertor - Main</string>
     <string name="hello_world">Hello world!</string>
-    <string name="title_activity_distance">DistanceActivity</string>
-    <string name="title_activity_area">AreaActivity</string>
-    <string name="title_activity_currency">CurrencyActivity</string>
+    <string name="title_activity_distance">Unit Convertor - Distance</string>
+    <string name="title_activity_area">Unit Convertor - Area</string>
+    <string name="title_activity_currency">Unit Convertor - Currency</string>
 
 </resources>

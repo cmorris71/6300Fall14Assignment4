@@ -7,15 +7,25 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 
 public class AreaActivity extends Activity {
+	
+	EditText mEditText;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_area);
+		
+		mEditText = (EditText) findViewById(R.id.text1);
+
 	}
 	
 	public void handleClick(View view){
 		boolean checked = ((RadioButton) view).isChecked();
+		
+		if(mEditText.getText().length()==0){
+			showError();
+			return;
+		}
 		
 		EditText txt = (EditText) findViewById(R.id.text1);
 		double area = Double.parseDouble(txt.getText().toString());
@@ -45,4 +55,8 @@ public class AreaActivity extends Activity {
 		return String.format("%.3f", sqFeet);
 		//return String.valueOf(sqFeet);
 	}
+	
+	private void showError() {
+		mEditText.setError("Input value may not be empty");
+		}
 }
